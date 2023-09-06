@@ -4,14 +4,14 @@ server:
 spring:
   kafka:
     producer:
-        bootstrap-servers: localhost:9092
+        bootstrap-servers: kafka:9092
         key-serializer: org.apache.kafka.common.serialization.StringSerializer
         value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
-    url: jdbc:mysql://localhost:3306/sample
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://root:pissw0rd123@springmysql:3306/sample
+    #username: root
+    #password: p@ssw0rd@123
+    #driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:

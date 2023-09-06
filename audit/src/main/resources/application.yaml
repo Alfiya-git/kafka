@@ -1,22 +1,22 @@
 spring:
   kafka:
     consumer:
-            bootstrap-servers: localhost:9092
+            bootstrap-servers: kafka:9092
             auto-offset-reset: earliest
             key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
             value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   datasource:
-    url: jdbc:mysql://localhost:3306/sample
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://root:pissw0rd123@springmysql:3306/sample
+    # username: root
+    # password: pissw0rd123
+    # driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQLDialect
 
 kafka:
   name: user_aud
